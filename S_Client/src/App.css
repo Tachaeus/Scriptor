@@ -1,0 +1,781 @@
+/*---------------------General Styling------------------- */
+body {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 0 auto;
+  font-weight: 550;
+  text-align: center;
+  padding: 10px;
+  background-color: color-mix(in hwb decreasing hue, rgb(226, 226, 222) 20%, rgb(210, 210, 233) 40%);
+  background-image: image-set(url(https://palmettopayroll.net/wp-content/uploads/2016/12/bigstock-139141391.jpg));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  color: #eee;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  font-size: xx-large;
+  padding-right: 5%;
+  margin: 0;
+}
+
+h1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: 2%;
+  margin: -7px;
+  padding: 0px 4px 0px 4px;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.message {
+  position: relative;
+  display: flex;
+  margin: 50px 0px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  align-items: center;
+  justify-self: center;
+  background-color: color-mix(in lch increasing hue, rgb(3, 62, 70) 34%, rgba(229, 237, 245, 0.021) 42%);
+}
+
+.message span,
+.message a button {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 6px;
+}
+
+/*------------- Header * Footer Component---------------- */
+/* Navbar */
+body nav {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  place-content: center;
+  width: 100vw;
+  height: 60px;
+  overflow-x: hidden;
+  max-height: 650px;
+  background-color: color-mix(in hwb decreasing hue, rgb(226, 226, 222) 20%, rgb(47, 47, 61) 52%);
+  margin: -10px 0px 10px -10px;
+  z-index: 1;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  padding: 2px;
+  margin: 0;
+  height: 100%;
+}
+
+.menu button {
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  border: 1px solid transparent;
+  top: 2%;
+  left: 5%;
+  color: #eee;
+  font-size: x-large;
+  max-width: 20px;
+  max-height: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dropDown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 6%;
+  left: -5%;
+  right: -5%;
+  justify-content: center;
+  border-top-right-radius: 3%;
+  border-top-left-radius: 3%;
+  width: 100v;
+  overflow-x: hidden;
+  max-height: 100%;
+  background-color: color-mix(in hwb decreasing hue, rgb(226, 226, 222) 20%, rgb(47, 47, 61) 40%);
+  z-index: 2;
+}
+
+.dropDown li {
+  list-style: none;
+  padding: 4px;
+}
+
+.dropDown li a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 4px;
+  justify-content: center;
+  color: #f8f5f8;
+}
+
+.dropDown li :hover {
+  color: #747bff;
+}
+
+.dropDown button {
+  position: absolute;
+  padding: 4px;
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropDown button:hover {
+  color: #333;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 10px 0px 10px;
+  padding: 4px;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 8px;
+}
+
+nav .login_btn {
+  display: block;
+  padding: 10px;
+  margin: 0;
+  width: 100px;
+  border: 2px solid #747bff;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+nav .login_btn:hover {
+  border-color: transparent;
+  background-color: color-mix(in xyz, #eee 41%, #333 12%);
+}
+
+footer {
+  position: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: color-mix(in hwb decreasing hue, rgb(226, 226, 222) 20%, rgb(47, 47, 61) 52%);
+  margin: 10px 0px -12px -10px;
+  padding: 8px;
+}
+
+footer ul {
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+}
+
+footer .login_btn {
+  display: block;
+  padding: 10px;
+  margin: 0;
+  width: 100px;
+  border: 2px solid #747bff;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+footer .login_btn:hover {
+  border-color: transparent;
+  background-color: color-mix(in xyz, #eee 41%, #333 12%);
+}
+
+/*------------------ Main Area----------------- */
+/*---------- Login Page---------- */
+.login_page,
+.register_page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  left: calc(20px + 22%);
+  place-content: center;
+  width: 50%;
+  height: max-content;
+  border: 2px solid color-mix(in xyz, #eee 41%, #333 12%);
+  border-radius: 8px;
+  background-color: transparent;
+  padding: 4px;
+  font-size: smaller;
+}
+
+.login form,
+.register form {
+  width: 100%;
+  text-align: left;
+}
+
+.login form label .register form label {
+  font-size: smaller;
+}
+
+.login_page form input,
+.register_page form input {
+  background-color: transparent;
+  border: solid transparent;
+  border-bottom: 2px solid #eee;
+  width: 80%;
+  color: #f8f5f8;
+  padding: 2px;
+}
+
+.login_page form input:focus,
+.register_page form input:focus {
+  outline: none;
+}
+
+.login_page form>.remember_forgot,
+.register_page form>.remember_forgot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2px;
+}
+
+.login_page form>.remember_forgot input,
+.login_page form>.remember_forgot p,
+.register_page form>.remember_forgot input,
+.register_page form>.remember_forgot p {
+  cursor: pointer;
+  text-wrap: nowrap;
+  margin: 0;
+  padding: 4px;
+}
+
+.login_page form>.remember_forgot span,
+.register_page form>.remember_forgot span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+}
+
+.login_page form button,
+.register_page form button {
+  display: block;
+  position: relative;
+  background-color: #eee;
+  border-radius: 10px;
+  width: 80%;
+  left: 10%;
+  color: color-mix(in xyz, #eee 10%, #0e0e0e 77%);
+  padding: 4px;
+  transition: 0.5s ease;
+}
+
+.login_page form button:hover,
+.register_page form button:hover {
+  color: #f8f5f8;
+  background-color: color-mix(in xyz, #eee 41%, #333 12%);
+}
+
+/*---------- Home Page ---------- */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  left: 4%;
+  width: 100vw;
+  height: 80vh;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero_one {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 8px;
+  background-color: color-mix(in xyz, #0e0e0e 12%, #fff 16%);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  align-content: center;
+}
+
+.hero_two {
+  position: absolute;
+  right: 10%;
+  place-items: center;
+}
+
+.hero_img {
+  width: 170px;
+  height: 170px;
+  color: #250971;
+  background-color: color-mix(in xyz, #0e0e0e 12%, #fff 16%);
+  font-size: 6.5em;
+  clip-path: circle();
+  align-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.description,
+.instructions {
+  position: inherit;
+  width: 60%;
+  height: 100%;
+  justify-content: center;
+  background: fixed transparent;
+  padding: 8px;
+}
+
+.instructions ul {
+  display: flex;
+  left: 10%;
+  flex-direction: column;
+  list-style: none;
+  background-color: color-mix(in xyz, #0e0e0e 12%, #fff 16%);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.instructions ul li {
+  border-bottom: 1px solid #ffd;
+  border-left: 1px solid #ffd;
+  padding: 4px;
+}
+
+.instructions ul li+* {
+  background-color: color-mix(in lch decreasing hue, #747bff 42%, #fff 6%);
+}
+
+.accordion {
+  position: inherit;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 8px;
+  border: 1px solid color-mix(in hwb decreasing hue, grey 20%, white 40%);
+  border-radius: 10px;
+  width: 90%;
+  height: 100%;
+}
+
+.query {
+  border-radius: 10px;
+  padding: 4px;
+  text-align: left;
+  margin-bottom: -10px;
+  cursor: pointer;
+}
+
+.query .question-icon {
+  position: absolute;
+  display: none;
+  top: 50%;
+  right: 16px;
+  font-size: large;
+  font: bold;
+  padding-right: 2px;
+  transition: 100ms;
+}
+
+.query .question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: color-mix(in hwb decreasing hue, #333 40%, white 20%);
+  border-bottom: 1px solid color-mix(in xyz, #eee 36%, #333 92%);
+  border-radius: 10px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  padding: 8px;
+}
+
+.query .answer {
+  background-color: rgba(73, 85, 124, 0.863);
+  border-radius: 10px;
+  color: #eee;
+  margin-top: 1px;
+  margin-bottom: -1px;
+  padding: 8px;
+  transition: 700ms;
+}
+
+.action_call {
+  position: inherit;
+  width: 60%;
+  background-image: url(https://i.ibb.co/5V6Tb0W/unsure.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-text-stroke: 0.5px color-mix(in lch increasing hue, #0e0e0e 92%, #eee 4%);
+  color: #ffd;
+}
+
+/*---------- About Page ----------*/
+.about_page {
+  position: inherit;
+  justify-items: center;
+}
+
+.about_page p {
+  width: 70%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+  padding: 8px;
+  text-align: left;
+}
+
+/*---------- Tasks Page ----------*/
+h3 {
+  border-bottom: 1px solid;
+}
+
+.tasks_page {
+  position: inherit;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 95%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.task_collector {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left: 8%;
+  padding: 2px;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.task_collector form input,
+textarea {
+  margin: 4px;
+  padding: 4px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background-color: color-mix(in xyz, #eee 16%, #333 62%);
+}
+
+.task_collector input,
+textarea:focus {
+  outline: none;
+}
+
+.task_collector form button {
+  display: block;
+  position: relative;
+  background-color: #eee;
+  border-radius: 10px;
+  width: 80%;
+  left: 10%;
+  color: color-mix(in xyz, #eee 10%, #0e0e0e 77%);
+  padding: 4px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.task_collector form button:hover {
+  color: #f8f5f8;
+  background-color: color-mix(in xyz, #eee 41%, #333 12%);
+}
+
+.task_list {
+  position: relative;
+  left: 8%;
+  width: 95%;
+  padding: 4px;
+  border: 1px solid #ffd;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.task_list ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.task_list ul>li {
+  position: inherit;
+  display: flex;
+  flex-direction: row;
+  margin: 2px 0px 1px -30px;
+  padding: 4px;
+  justify-content: space-between;
+  border-radius: 4px;
+  flex-wrap: wrap;
+  background-color: rgba(73, 85, 124, 0.863);
+}
+
+/*---------- Contact Page ----------*/
+.contact {
+  position: relative;
+  left: 2%;
+  right: 2%;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: color-mix(in xyz, #f8f8f8 20%, grey 10%);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  width: 95%;
+  padding: 4px;
+}
+
+.contact_info,
+.message {
+  position: inherit;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 6px;
+  text-align: left;
+}
+
+.message {
+  padding: 8px;
+  line-height: normal;
+  background-color: color-mix(in xyz, #333 14%, #0e0e0e 43%);
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.message input,
+.message input textarea {
+  width: 70%;
+  padding: 4px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: color-mix(in xyz, #f8f8f8 20%, grey 50%);
+}
+
+.message input:focus {
+  outline: none;
+}
+
+.message button {
+  display: block;
+  position: relative;
+  background-color: #eee;
+  border-radius: 10px;
+  width: 80%;
+  left: 10%;
+  color: color-mix(in xyz, #eee 10%, #0e0e0e 77%);
+  padding: 4px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.message button:hover {
+  background-color: transparent;
+  color: #ffd;
+}
+
+/*---------- More Page -----------*/
+.more_page h2 {
+  position: relative;
+  text-decoration: underline;
+}
+
+.more_page p,
+.experience,
+.projects,
+.reach_out {
+  position: relative;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  text-align: left;
+  padding: 6px;
+}
+
+.skills {
+  position: inherit;
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.skills li {
+  list-style: none;
+  background-color: color-mix(in lch decreasing hue, #747bff 42%, #fff 6%);
+  margin: 4px;
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+
+.experience ul li {
+  list-style: none;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin: 4px 0px;
+  padding: 6px;
+  background-color: color-mix(in lch decreasing hue, #747bff 42%, #fff 6%);
+}
+
+.projects ol a:hover {
+  color: #ffd;
+}
+
+.projects li {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-left: 4px solid #ffd;
+  counter-increment: calc(+2);
+  transition: transform 0.2s;
+}
+
+.projects li:hover {
+  transform: translateX(10px);
+  background-color: color-mix(in xyz, #eee 10%, #0e0e0e 47%);
+}
+
+@media (max-width: 768px) {
+
+  /* Tablets and smaller */
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 4px;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  nav h1 {
+    position: absolute;
+    font-size: 28px;
+  }
+
+  body nav {
+    background-color: transparent;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav .login_btn {
+    display: none;
+  }
+
+  .hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100%;
+    justify-content: center;
+    justify-items: center;
+    padding: 6px;
+    margin-top: 16px;
+  }
+
+  .hero_one,
+  .hero_two {
+    position: relative;
+    text-align: center;
+    text-wrap: wrap;
+    width: 80%;
+  }
+
+  .hero_one {
+    height: 80vh;
+  }
+
+  .hero_two {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    left: 5%;
+  }
+
+  .instructions,
+  .description,
+  .accordion,
+  .action_call,
+  .tasks_page {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact_info,
+  .message {
+    width: 90%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /* Tablets */
+  nav .menu {
+    display: none;
+  }
+
+  nav li a {
+    color: #f8f5f9;
+  }
+}
+
+@media (min-width: 1025px) {
+
+  /* Desktops */
+  nav .menu {
+    display: none;
+  }
+
+  header li a {
+    color: #f8f5f9;
+  }
+}

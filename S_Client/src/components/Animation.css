@@ -1,0 +1,68 @@
+/*--------------- Animations ---------------*/
+
+/* Spinning */
+.message i {
+  font-size: x-large;
+  color: #747bff;
+  transform: perspective(1000px);
+  animation: autoRotate 2s linear infinite;
+}
+
+.rotating {
+    animation: autoRotate;
+    animation-timeline: view();
+}
+
+.fading {
+    animation: autoFade both;
+    animation-timeline: view(70% 10%);
+    transition: 5s ease-in-out;
+}
+
+.blurring {
+    animation: autoBlur both;
+    animation-timeline: view();
+    transition: 0.5s ease;
+}
+
+@keyframes autoRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes autoRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes autoFade {
+    0% {
+        transform: translateY(0) scale(0.2);
+        filter: opacity(0);
+    }
+    80% {
+        transform: translateY(150px) scale(1);
+        filter: opacity(1);
+    }
+}
+
+@keyframes autoBlur {
+    100% {
+        filter: blur(40px);
+    }
+    45%, 70% {
+        filter: blur(0px);
+    }
+    0% {
+        filter: blur(40px);
+    }
+}

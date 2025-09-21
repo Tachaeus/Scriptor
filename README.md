@@ -1,2 +1,0 @@
-# Scriptor
-Task Mmanager
