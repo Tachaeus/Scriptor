@@ -11,7 +11,7 @@ body {
   text-align: center;
   padding: 10px;
   background-color: color-mix(in hwb decreasing hue, rgb(226, 226, 222) 20%, rgb(210, 210, 233) 40%);
-  background-image: image-set(url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEFHvXzHTiaXg-Px63r0HIOeF5Xw_DzWMqRA&s));
+  background-image: image-set(url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSipOZsMX2-iKtuNxFIRWsudcdH1FzAbC7ag&s));
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: darken;
